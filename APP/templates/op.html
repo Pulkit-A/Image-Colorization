@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ImageColorization</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style1.css')}}">
+</head>
+<body>
+  <div class="box-area">
+    <header>
+        <div class="logo">
+          <a href="#"><h1>ImageColorization</h1></a>
+        </div>
+    </div>
+    </header>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+    <div class="content-area">
+      <div style="width: 48%; float:left; height:300px; background:lightgray;
+       margin:10px">
+        <img style='height: 100%; width: 100%; object-fit: contain' 
+        src="{{url_for('static',filename=a)}}">
+        </div>
+ 
+
+        <div style="width: 48%;float:right; height:300px; background:lightgray;
+        margin:10px">
+          <img style='height:100%;width:100%; object-fit: contain' 
+          src="{{url_for('static',filename=b)}}">
+
+     
+        </div>
+        <p>
+          <div>
+            <form action="download_file" method ="POST">
+             <button style="margin: 5px;"type="submit" id="custom-button">Download colorized image</button>
+            </form>
+          </div>
+
+            <form action="/" method ="post">
+             <button style="margin: 5px;" type="submit" id="custom-button">home</button>
+            </form>
+            </div>
+        </body>
+</html>

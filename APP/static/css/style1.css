@@ -1,0 +1,59 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  text-align: center;
+  font-family: montserrate;
+}
+header{
+  height: 100px;
+  background: #262626;
+  width: 100%;
+  z-index: 12;
+  position: fixed;
+}
+.logo{
+width: 30%;
+float: left;
+line-height: 100px;
+}
+.logo a{
+text-decoration: none;
+font-size: 30px;
+font-family: bignoodletitling;
+color: #fff;
+letter-spacing: 5px;
+}
+.content-area{
+width: 100%;
+position: fixed;
+top: 100px;
+background:#ddd;
+height: 600px;
+}
+#custom-button{
+  padding: 10px;
+  color: white;
+  background-color: #141414;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor:pointer;
+}
+#custom-button:hover{
+  background-color: #0000b28f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

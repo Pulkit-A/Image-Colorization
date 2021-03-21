@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ImageColorization</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+  <div class="box-area">
+    <header>
+      <div class="wrapped">
+        <div class="logo">
+          <a href="#"><h1>ImageColorization</h1></a>
+        </div>
+      </div>
+    </header>
+    <div class="banner-area">
+      <h2>welcome</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-area">
+      <div class="wrapper">
+        <h2>about</h2>
+        <p><b>There is a huge amount of old black and white picture available 
+          about historical events and personal memories. With image colorization we can restore all those images into their colorized versions that will surely provide better visual information. Automated colorization of black and white images has been subject to much research within the computer vision and machine learning communities
+        </b></p>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+                <hr></hr>
+              <h2>upload your image</h2>
+              <form action="/" method="POST" enctype="multipart/form-data">
+              <body>
+              <input type="file" id="real-file" name="image" accept="image/*"  hidden="hidden">
+              <button type="button" id="custom-button">select a image</button>
+              <span id="custom-text">no file choosen</span>
+              <button type="submit" id="custom-button">Submit</button>
+              <script type="text/javascript">
+                const realfilebtn =document.getElementById("real-file");
+                const custombtn =document.getElementById("custom-button");
+                const customtxt =document.getElementById("custom-text")
+                custombtn.addEventListener("click",function() {
+                realfilebtn.click();
+                });
+                realfilebtn.addEventListener("change",function() {
+              
+                  if(realfilebtn.value){
+                    customtxt.innerHTML=realfilebtn.value;
+                  } else{
+                    customtxt.innerHTML="no file choosen";
+                  }
+                });
+              </script>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
